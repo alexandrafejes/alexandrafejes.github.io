@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Permobilus.com</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/instantsearch.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script>
+  <script src="js/instantsearch.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="content-wrapper">
+      <a href="http://permobilus.com" class="is-logo"><img src="img/permobil-logo.png" width="200"></a>
+      <a href="./" class="logo"></a>
+
+      <div class="input-group">
+        <input type="text" class="form-control" id="q" />
+        <span class="input-group-btn">
+          <button class="btn btn-default"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </header>
+
+  <div class="content-wrapper">
+    <aside>
+<!-- Left Menu -->
+      <div id="clear-all"></div>   
+      <section class="facet-wrapper">
+        <div class="facet-category-title facet">Product Lines</div>
+        <div id="categories"></div>
+      </section>
+
+      <section class="facet-wrapper">
+        <div class="facet-category-title">Primary Filter</div>
+        <div class="ais-root ais-refinement-list ais-root__collapsible">
+          <div class="ais-refinement-list--header ais-header">Age</div>
+          <div id="age" class="filter_title"></div>
+        </div>
+       
+          <!-- <div id="height"></div> -->
+          <!-- <div id="weight"></div> -->
+          <div class="ais-root ais-refinement-list ais-root__collapsible">
+            <div class="ais-refinement-list--header ais-header">Dignostic</div>
+            <div id="dignostic" class="filter_title"></div>
+          </div>
+          <!-- <div id="phy_condition"></div> -->
+      </section>
+
+      <section class="facet-wrapper">
+        <div class="facet-category-title">Secondary Filter</div>
+          <div id="material" class="filter_title"></div>
+          <div id="frm_style" class="filter_title"></div>
+          <div id="fld_type" class="filter_title"></div>
+          <!-- <div id="seat"></div> -->
+      </section>
+<!-- test part -->
+      <!-- <section class="facet-wrapper">
+        <div class="facet-category-title">Test Filter</div>
+
+          <div id="test"></div>
+
+      </section> -->
+ <!-- end test  -->
+    </aside>
+
+<!-- End Menu -->
+<!-- Product Part -->
+      <div class="results-wrapper">
+        <section id="results-topbar">
+          <div class="sort-by">
+            <label></label>
+            <div id="sort-by-selector"></div>
+          </div>
+
+          <div id="stats" class="text-muted"></div>
+        </section>
+
+        <main id="hits"></main>
+        <section id="pagination"></section>
+      </div>
+    </div>
+  </div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script language="JavaScript" src="js/search.js"></script>
+</body>
