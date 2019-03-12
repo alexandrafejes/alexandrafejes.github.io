@@ -46,7 +46,7 @@ var hitTemplate =
       <div class"product-info">
         <p class="summary"><span class="title">Material:&nbsp</span>{{#taxonomies.pa_mwc_material}}<span >{{.}},&nbsp</span> {{/taxonomies.pa_mwc_material}}
                           <span class="title">Type:&nbsp</span>{{#taxonomies.pa_mwc_type}}<span >{{.}},&nbsp</span> {{/taxonomies.pa_mwc_type}}
-                          <span class="title">Tube:&nbsp</span>{{#taxonomies.pa_tube}}<span >{{.}}&nbsp</span> {{/taxonomies.pa_tube}}
+                          <span class="title">Tube:&nbsp</span>{{#taxonomies.pa_tube}}<span >{{.}},&nbsp</span> {{/taxonomies.pa_tube}}
         </p>       
       </div>
         
