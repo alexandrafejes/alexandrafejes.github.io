@@ -43,8 +43,8 @@ var hitTemplate =
     <div class="product-desc-wrapper">
       <a href="{{{permalink}}}" class="product-name">{{{_highlightResult.post_title.value}}}</a>
       <div class"product-info">
-        <p class="summary"><span class="title">Materials:</span>{{#taxonomies.pa_mwc_material}}<span class="badge">{{.}}</span> {{/taxonomies.pa_mwc_material}}</p>
-        <p class="summary"><span class="title">Style:</span>{{#taxonomies.pa_mwc_type}}<span class="badge">{{.}}</span> {{/taxonomies.pa_mwc_type}}</p>
+        <p class="summary"><span class="title">Material:</span>{{#taxonomies.pa_mwc_material}}<span class="badge">{{.}}</span> {{/taxonomies.pa_mwc_material}}</p>
+        <p class="summary"><span class="title">Type:</span>{{#taxonomies.pa_mwc_type}}<span class="badge">{{.}}</span> {{/taxonomies.pa_mwc_type}}</p>
         <p class="summary"><span class="title">Tube:</span>{{#taxonomies.pa_tube}}<span class="badge">{{.}}</span> {{/taxonomies.pa_tube}}</p>       
       </div>
         <div id="desc" class="product-type">{{{_highlightResult.content.value}}}</div>
