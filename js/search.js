@@ -221,7 +221,7 @@ search.addWidget(
     ],
     sortBy: ['name:asc'],
     templates: {
-      header: 'Dignostic',
+      header: 'Diagnostic',
       item: facetTemplateCheckbox
     },
   })
