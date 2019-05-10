@@ -140,56 +140,6 @@ search.addWidget(
   })
 );
 
-// start custom RefinementList
-
-function renderFn(RefinementListRenderingOptions, isFirstRendering) {
-    if (isFirstRendering) {
-      RefinementListRenderingOptions.widgetParams.containerNode
-        .html('<ul></ul>')
-    }
- 
-      RefinementListRenderingOptions.widgetParams.containerNode
-        .find('li[data-refine-value]')
-        .each(function() { $(this).off('click'); });
- 
-    if (RefinementListRenderingOptions.canRefine) {
-      var list = RefinementListRenderingOptions.items.map(function(item) {      
-      for (var items_index = 0; items_index < RefinementListRenderingOptions.widgetParams.items.length; items_index++) {
-        if (item.value == RefinementListRenderingOptions.widgetParams.items[items_index].value) {
-          return `
-            <li calss="refinement_check" data-refine-value="${item.value}">
-              <input type="checkbox" value="${item.value}" ${item.isRefined ? 'checked' : ''} />
-              <a href="${RefinementListRenderingOptions.createURL(item.value)}">
-                ${RefinementListRenderingOptions.widgetParams.items[items_index].label} <span class="facet-count">(${item.count})</span>
-              </a>
-            </li>
-          `;
-        }
-      }
-    });
-
- 
-      RefinementListRenderingOptions.widgetParams.containerNode.find('ul').html(list);
-      RefinementListRenderingOptions.widgetParams.containerNode
-        .find('li[data-refine-value]')
-        .each(function() {
-          $(this).on('click', function(event) {
-            event.stopPropagation();
-            event.preventDefault();
- 
-            RefinementListRenderingOptions.refine($(this).data('refine-value'));
-          });
-        });
-    } else {
-      RefinementListRenderingOptions.widgetParams.containerNode.find('ul').html('');
-    }
-  }
- 
-  // connect `renderFn` to RefinementList logic
-  var customRefinementList = instantsearch.connectors.connectRefinementList(renderFn);
- 
- 
-// End custom RefinementList
 
 search.addWidget(
     customRefinementList({
